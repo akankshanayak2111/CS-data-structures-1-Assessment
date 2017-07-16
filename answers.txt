@@ -1,12 +1,20 @@
 
 Runtime
 
-1. When calculating the Big O notation for a particular algorithm, it’s necessary to consider the length of time it takes for the algorithm to run as the algorithm’s workload approaches infinity. You can think of the workload as the number of tasks required to complete a job. What determines the workload of figuring out whether your box of animal crackers contains an elephant?
+1. When calculating the Big O notation for a particular algorithm, it’s necessary 
+to consider the length of time it takes for the algorithm to run as the algorithm’s 
+workload approaches infinity. You can think of the workload as the number of tasks 
+required to complete a job. What determines the workload of figuring out whether 
+your box of animal crackers contains an elephant?
 
-Answer: The workload of figuring out whether a box of animal crackers contains an elephant depends on the number of crackers there are in the box. We will have to gothrough each cracker, one at a time, to see whether it is an elephant. This is similar to iterating over a list of items, where the length of the list determines the workload.
+Answer: The workload of figuring out whether a box of animal crackers contains an 
+elephant depends on the number of crackers there are in the box. We will have to go 
+through each cracker, one at a time, to see whether it is an elephant. This is similar 
+to iterating over a list of items, where the length of the list determines the workload.
 
 
-2. Order the following runtimes in descending order of efficiency (that is, fastest runtimes first, slowest last) as n approaches infinity:
+2. Order the following runtimes in descending order of efficiency (that is, fastest 
+runtimes first, slowest last) as n approaches infinity:
 -  O(log n)
 -  O(n^2)
 -  O(n log n)
@@ -42,36 +50,67 @@ Answer: Two situations - 1) A stack of plates to be cleaned.
 
 Linked Lists
 
-1. Given the linked list below, which are the nodes? What is the data for each node? Where is the head? Where is the tail? (Please be as specific as possible — exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?)
+1. Given the linked list below, which are the nodes? What is the data for each node? 
+Where is the head? Where is the tail? (Please be as specific as possible — 
+exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?)
 
-Answer: The nodes are the boxes containing data(strings in this case) and next for Apple, Berry and Cherry. The data for each node is the text (string) - "Apple", "Berry" and "Cherry". The head is the Apple node. There is no tail assigned in this linked list. 
+Answer: The nodes are the boxes containing data(strings in this case) and next 
+for Apple, Berry and Cherry. The data for each node is the text (string) - "Apple", 
+"Berry" and "Cherry". The head is the Apple node. There is no tail assigned in this linked list. 
 
 
 2. What’s the difference between doubly- and singly-linked lists?
 
-Answer: In a singly-linked list, apart from the data attribute, each node has a next attribute, which points to the next node in the list. In doubly-linked lists, each node has two attributes other than the data attribute, the previous and next attributes which point to the previous and next node in the list, respectively. It is possible to traverse singly-linked lists only in one direction whereas, it is possible to traverse doubly-linked lists in two directions. Singly-linked lists may or may not have a tail attribute. Doubly-linked lists have a tail attribute which helps with traversal in the second direction. Each node in a doubly-linked list will need more space in memory, because of the previous attribute, compared to a node in the singly-linked list.
+Answer: In a singly-linked list, apart from the data attribute, each node has a 
+next attribute, which points to the next node in the list. In doubly-linked lists, 
+each node has two attributes other than the data attribute, the previous and next 
+attributes which point to the previous and next node in the list, respectively. 
+It is possible to traverse singly-linked lists only in one direction whereas, it 
+is possible to traverse doubly-linked lists in two directions. Singly-linked lists 
+may or may not have a tail attribute. Doubly-linked lists have a tail attribute 
+which helps with traversal in the second direction. Each node in a doubly-linked 
+list will need more space in memory, because of the previous attribute, compared 
+to a node in the singly-linked list.
 
 
 3. Why is it faster to append to a linked list if we keep track of the tail as an attribute?
 
-Answer: It is faster to append to a linked list if we keep track of the tail as an attribute as we can directly go the the node at the tail, add the new node and move the tail pointer to the new node. If there is no tail, we will have to traverse the linked list, each node at a time, before we reach the last node where we can append the new node. In the case where a linked list has a tail, the runtime for appending a new node is O(1) or constant whereas in case there is no tail, the runtime will be O(n) or linear and it will be dependent on the size of the linked list. 
+Answer: It is faster to append to a linked list if we keep track of the tail as an attribute
+ as we can directly go the the node at the tail, add the new node and move the tail pointer 
+ to the new node. If there is no tail, we will have to traverse the linked list, each node 
+ at a time, before we reach the last node where we can append the new node. In the case where 
+ a linked list has a tail, the runtime for appending a new node is O(1) or constant whereas 
+ in case there is no tail, the runtime will be O(n) or linear and it will be dependent on 
+ the size of the linked list. 
 
 
 Trees
 
-1. Given the tree above, in what order would a Breadth First Search (BFS) algorithm visit each node until finding burritos (starting at food)? (Assume nodes are enqueued in left-to-right order.) Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+1. Given the tree above, in what order would a Breadth First Search (BFS) algorithm visit 
+each node until finding burritos (starting at food)? (Assume nodes are enqueued in left-to-right 
+order.) Just list the order of nodes visited; no need to recreate the state of the algorithm 
+data in your answer.
 
-Answer: The order of nodes visited is : food -> Italian -> Indian -> Mexican -> lasagna -> pizza -> tikka masala -> saag -> burritos.
+Answer: The order of nodes visited is : food -> Italian -> Indian -> Mexican -> lasagna -> pizza -> 
+tikka masala -> saag -> burritos.
 
 
-2. Given the tree above, in what order would a Depth First Search (DFS) algorithm visit each node until finding Chicago-style (starting at food)? (Assume nodes are pushed in left-to-right order.) Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+2. Given the tree above, in what order would a Depth First Search (DFS) algorithm visit each node until 
+finding Chicago-style (starting at food)? (Assume nodes are pushed in left-to-right order.) Just list the 
+order of nodes visited; no need to recreate the state of the algorithm data in your answer.
 
-Answer: The order of nodes visited is : food -> Mexican -> enchiladas -> tacos -> burritos -> Indian -> saag -> tikka masala -> Italian -> pizza -> Sicilian -> New York-style -> Chicago-style
+Answer: The order of nodes visited is : food -> Mexican -> enchiladas -> tacos -> burritos -> Indian -> 
+saag -> tikka masala -> Italian -> pizza -> Sicilian -> New York-style -> Chicago-style
 
 
 3. How is a binary search tree different from other trees?
 
-Answer: Apart from the data attribute, each node in a binary search tree has a right child and a left child, whereas other trees have only one child attribute. In a binary search tree, the nodes are arranged according to a 'rule' or intrinsic meaningful order. Binary trees are used for fast searching. In the case of a balanced binary tree, the runtime for searching data is O(log n) whereas for regular trees the runtime for search is O(n).
+Answer: Apart from the data attribute, each node in a binary search tree has only two child attributes - a right child and 
+a left child, whereas in other trees a parent node may have multiple children. In a binary search tree, the nodes
+are arranged according to a 'rule' or intrinsic meaningful order. This means that the left child is lower in value to 
+the parent node and the right child is higher in value to the parent node. Binary trees are used for fast searching. In 
+the case of a balanced binary tree, the runtime for searching data is O(log n) whereas for regular 
+trees the runtime for search is O(n).                                               
 
 
 

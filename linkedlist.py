@@ -105,7 +105,6 @@ class LinkedList(object):
 
         current = self.head
         counter = 0
-   
 
         while current:
             if counter == idx:
@@ -113,9 +112,7 @@ class LinkedList(object):
             else:
                 current = current.next
                 counter += 1
-        raise Exception ("List not long enough")
-
-        
+        raise Exception ("List not long enough")                        
 
 
 
@@ -127,4 +124,3 @@ if __name__ == "__main__":
     if not result.failed:
         print "ALL TESTS PASSED. GOOD WORK!"
     print
-
